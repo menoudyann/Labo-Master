@@ -44,25 +44,26 @@ which java
 
 ```
 [INPUT]
-//TODO
+java --version
 
 [OUTPUT]
-//TODO
+openjdk 20.0.1 2023-04-18
 ```
 
 * [ ] Which current runtime is installed (JRE) ?
 
 ```
 [INPUT]
-//TODO
+java --version
 
 [OUTPUT]
-//TODO
+OpenJDK Runtime Environment (build 20.0.1+9-29)
 ```
 
 * [ ] Do we need to install the java virtual machine (JVM) ?
-
 ```
+No, already included in JRE
+
 ```
 
 ### Install the Open JDK
