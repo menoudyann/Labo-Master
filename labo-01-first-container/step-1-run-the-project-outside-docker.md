@@ -10,13 +10,13 @@
 git clone https://github.com/spring-projects/spring-petclinic.git
 ```
 
-* Read carefully the readme file
+* Read the readme file carefully
 
 <!---->
 
-* [ ] What type of application is it ? (A Java Application using Spring)
-* [ ] Which database engine is used ? (A in-memory database H2 which gets populated at startup with data.)
-* [ ] Do we need to install the package manager _MAVEN_ before building the project ? (Yes - **brew install maven**)
+* [ ] What type of application is it ?
+* [ ] Which database engine is used ?
+* [ ] Do we need to install the package manager _MAVEN_ before building the project ?
 
 <!---->
 
@@ -24,13 +24,13 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 <!---->
 
-* [X] Which version of Java should compatible with the code provided ?
+* [ ] Which version of Java should compatible with the code provided ?
 
 ## Setup Java components
 
-### Check your current java installation
+### Check your current Java installation
 
-* [ ] Where is java installed ?
+* [ ] Where is Java installed?
 
 ```
 [INPUT]
@@ -40,17 +40,17 @@ which java
 /Users/yannmenoud/.jenv/shims/java
 ```
 
-* [ ] Which current compiler is installed (JDK) ?
+* [ ] Which current compiler is installed (JDK)?
 
 ```
 [INPUT]
-java --version
+//TODO
 
 [OUTPUT]
-openjdk 20.0.1 2023-04-18
+//TODO
 ```
 
-* [ ] Which current runtime is installed (JRE) ?
+* [ ] Which current runtime is installed (JRE)?
 
 ```
 [INPUT]
@@ -61,21 +61,20 @@ OpenJDK Runtime Environment (build 20.0.1+9-29)
 ```
 
 * [ ] Do we need to install the java virtual machine (JVM) ?
-```
-No, already included in JRE
 
+```
 ```
 
 ### Install the Open JDK
 
-* [Oracle Download Web Site](https://jdk.java.net/20/)
+* [Oracle Download WebSite](https://jdk.java.net/20/)
 
 {% hint style="info" %}
 * Accept the end user license before trying, then
-* Then get the target url (cookies.
+* Then get the target URL (cookies).
 {% endhint %}
 
-```
+```powershell
 [INPUT]
 curl -O "https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4b/9/GPL/openjdk-20.0.1_macos-aarch64_bin.tar.gz"
 
@@ -85,15 +84,13 @@ curl -O "https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6
 100  183M  100  183M    0     0  3511k      0  0:00:53  0:00:53 --:--:-- 3450k
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Powershell output during sdk download process</p></figcaption></figure>
-
 #### Check the archive integrity before installing the JDK
 
 * [Get the hash provided by Oracle](https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4b/9/GPL/openjdk-20.0.1\_windows-x64\_bin.zip.sha256)
 * Generate your local hash based on the archive downloaded ([help](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.3))
 * Compare both hashes...
 
-```
+```powershell
 [INPUT]
 shasum -a 256 ~/Downloads/openjdk-20.0.1_macos-aarch64_bin.tar.gz
 
@@ -635,9 +632,7 @@ x ./jdk-20.0.1.jdk/Contents/Home/bin/jimage
 x ./jdk-20.0.1.jdk/Contents/_CodeSignature/CodeResources
 ```
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Powershell output during unzip process</p></figcaption></figure>
-
-#### Move the unzip folder to Progams Folder
+#### Move the unzip folder to Programs Folder
 
 ```
 [INPUT]
@@ -667,7 +662,7 @@ echo $JAVA_HOME
 * [ ] Update PATH environment variable
 
 {% hint style="info" %}
-Backup your current path before updating it.
+Back up your current path before updating it.
 
 echo %PATH% > path.back
 {% endhint %}
@@ -681,17 +676,17 @@ eval "$(jenv init -)" >> ~/.zshrc
 
 
 [OUTPUT]
----
+//TODO
 ```
 
-* [ ] Check the variables settings
+* [ ] Check the variables
 
 ```
 [INPUT]
 echo $PATH
 
 [OUTPUT]
-/Users/yannmenoud/.jenv/shims:/Users/yannmenoud/.jenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/bin:/Users/yannmenoud/development/flutter/bin:/Users/yannmenoud/Desktop/CPNV/MAW12/helpers/MatuXor-EDT-Extractors
+//TODO
 ```
 
 ## Build and test the project
@@ -703,17 +698,12 @@ echo $PATH
 [OUTPUT]
 
 
-              |\      _,,,--,,_
-             /,`.-'`'   ._  \-;;,_
-  _______ __|,4-  ) )_   .;.(__`'-'__     ___ __    _ ___ _______
- |       | '---''(_/._)-'(_\_)   |   |   |   |  |  | |   |       |
- |    _  |    ___|_     _|       |   |   |   |   |_| |   |       | __ _ _
- |   |_| |   |___  |   | |       |   |   |   |       |   |       | \ \ \ \
- |    ___|    ___| |   | |      _|   |___|   |  _    |   |      _|  \ \ \ \
- |   |   |   |___  |   | |     |_|       |   | | |   |   |     |_    ) ) ) )
- |___|   |_______| |___| |_______|_______|___|_|  |__|___|_______|  / / / /
- ==================================================================/_/_/_/
+### Result expected 
 
-:: Built with Spring Boot :: 3.0.4
+```
+[INPUT]
+//TODO
 
+[OUTPUT]
+//TODO
 ```
