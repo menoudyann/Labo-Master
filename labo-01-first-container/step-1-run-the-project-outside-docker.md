@@ -676,7 +676,7 @@ eval "$(jenv init -)" >> ~/.zshrc
 
 
 [OUTPUT]
-//TODO
+---
 ```
 
 * [ ] Check the variables
@@ -686,7 +686,7 @@ eval "$(jenv init -)" >> ~/.zshrc
 echo $PATH
 
 [OUTPUT]
-//TODO
+/Users/yannmenoud/.rbenv/shims:/Users/yannmenoud/.jenv/shims:/Users/yannmenoud/.jenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/bin:/Users/yannmenoud/development/flutter/bin:/Users/yannmenoud/Desktop/CPNV/MAW12/helpers/MatuXor-EDT-Extractors
 ```
 
 ## Build and test the project
@@ -696,14 +696,4 @@ echo $PATH
 ./mvnw spring-boot:run
 
 [OUTPUT]
-
-
-### Result expected 
-
-```
-[INPUT]
-//TODO
-
-[OUTPUT]
-//TODO
 ```
