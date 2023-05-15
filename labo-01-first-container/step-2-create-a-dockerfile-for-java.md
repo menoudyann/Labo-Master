@@ -9,10 +9,10 @@
 
 ```
 [INPUT]
-//TODO
+touch Dockerfile
 
 [OUTPUT]
-//TODO
+---
 ```
 
 * Using your IDE, add the following contents to the Dockerfile:
@@ -23,38 +23,38 @@
 FROM eclipse-temurin:17-jdk-jammy
 ```
 
-* [ ] What is the purpose of the directive starting with "# synthax=docker..."
+* [X] What is the purpose of the directive starting with "# synthax=docker..."
 
 <!---->
 
 * [Official documentation - Synthax directive](https://docs.docker.com/build/dockerfile/frontend/)
 
 ```
-//TODO
+Indicates that the Dockerfile should be interpreted using a specific version of the Dockerfile syntax.
 ```
 
-* [ ] Is the docker image suitable for a production environment?
+* [X] Is the docker image suitable for a production environment?
 
 ```
-//TODO
+Yes, the dockerversion is dockerfile:1. For labs channel : dockerfile:labs
 ```
 
 ### Dependencies resolution and first app build
 
-* [ ] Set the image's working directory by adding this command line:
+* [X] Set the image's working directory by adding this command line:
 
 ```
 WORKDIR /app
 ```
 
-* [ ] Before we can resolve dependencies with _MAVEN,_ we need to get the _MAVEN_ wrapper and your pom.xml file into your image.
+* [X] Before we can resolve dependencies with _MAVEN,_ we need to get the _MAVEN_ wrapper and your pom.xml file into your image.
 
 ```
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 ```
 
-* [ ] Let's use _MAVEN_ to resolve the dependencies.
+* [X] Let's use _MAVEN_ to resolve the dependencies.
 
 ```
 RUN ./mvnw dependency:resolve
@@ -63,19 +63,19 @@ RUN ./mvnw dependency:resolve
 * [ ] How is it possible to resolve the dependencies when the source code is not available at this point in the process?
 
 ```
-//TODO
+All dependencies are given in the pom.xml file
 ```
 
 * Add the command able to provide (copy) your source code to the image.
 
 ```
-//TODO
+COPY src ./src
 ```
 
 * Add the command responsible to run your application inside the Docker.
 
 ```
-//TODO
+CMD ["./mvnw", "spring-boot:run"]
 ```
 
 ## Create a .dockerignore file
@@ -86,8 +86,8 @@ RUN ./mvnw dependency:resolve
 To meet the good practice provided by Docker, we have to reduce the amount of data in the Docker build context. For this first lab, we will simply remove the directory containing the eventual outputs of MAVEN.
 {% endhint %}
 
-* [ ] Create a .dockerignore file in the same directory as the Dockerfile.
-* [ ] Add the folder containing the MAVEN output.
+* [X] Create a .dockerignore file in the same directory as the Dockerfile.
+* [X] Add the folder containing the MAVEN output. (**target**)
 
 ## Build an image
 
@@ -100,7 +100,7 @@ This [doc may also help you with tag samples](https://docs.docker.com/engine/ref
 * [ ] Find the best tag for your image (this image is not intended for publication.)
 
 ```
-//TODO
+labs seems to be a good practice, as we are experimenting with docker at the moment.
 ```
 
 * [ ] Build your first Docker image
@@ -108,7 +108,7 @@ This [doc may also help you with tag samples](https://docs.docker.com/engine/ref
 Result Expected:
 
 ```
-docker build --tag <yourTag>
+docker build --tag java-spring:labs ./    
 Sending build context to Docker daemon   9.92MB
 Step 1/7 : FROM eclipse-temurin:17-jdk-jammy
  ---> 56c7bc12ee6d
@@ -138,10 +138,12 @@ ble check and reset permissions for sensitive files and directories.
 
 ```
 [INPUT]
-//TODO
+docker build --tag java-spring:labs ./    
 
 [OUTPUT]
-//TODO
+...
+[+] Building 349.1s (11/11) FINISHED  
+...
 ```
 
 ### View local images
@@ -160,8 +162,8 @@ eclipse-temurin   17-jdk-jammy   56c7bc12ee6d   3 days ago       456MB
 
 ```
 [INPUT]
-//TODO
+docker images
 
 [OUTPUT]
-//TODO
+java-spring   labs      25f129967a02   19 minutes ago   602MB
 ```
