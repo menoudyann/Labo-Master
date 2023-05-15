@@ -14,9 +14,9 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 <!---->
 
-* [X] What type of application is it ? (A Java Application using Spring)
-* [X] Which database engine is used ? (A in-memory database H2 which gets populated at startup with data.)
-* [X] Do we need to install the package manager _MAVEN_ before building the project ? (Yes, because our project is built using Maven)
+* [ ] What type of application is it ? (A Java Application using Spring)
+* [ ] Which database engine is used ? (A in-memory database H2 which gets populated at startup with data.)
+* [ ] Do we need to install the package manager _MAVEN_ before building the project ? (Yes - **brew install maven**)
 
 <!---->
 
