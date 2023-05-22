@@ -96,13 +96,13 @@ Read carefully [this doc](https://docs.docker.com/develop/dev-best-practices/) a
 This [doc may also help you with tag samples](https://docs.docker.com/engine/reference/commandline/tag/).
 {% endhint %}
 
-* [ ] Find the best tag for your image (this image is not intended for publication.)
+* [x] Find the best tag for your image (this image is not intended for publication.)
 
 ```
 labs seems to be a good practice, as we are experimenting with docker at the moment.
 ```
 
-* [ ] Build your first Docker image
+* [x] Build your first Docker image
 
 Result Expected:
 
@@ -147,7 +147,7 @@ docker build --tag java-spring:labs ./
 
 ## View local images
 
-* [ ] Using the "docker images" command, observe your images, and the associated tag.
+* [x] Using the "docker images" command, observe your images, and the associated tag.
 
 ### Result expected:
 
@@ -168,7 +168,7 @@ java-spring   labs      25f129967a02   19 minutes ago   602MB
 
 ## Using tags
 
-* [ ] Using the appropriate command, try to obtain this situation on your local machine:
+* [x] Using the appropriate command, try to obtain this situation on your local machine:
 
 ```
 [INPUT]
@@ -182,7 +182,7 @@ petclinic         prod           323bdb488603   2 hours ago   606MB
 eclipse-temurin   17-jdk-jammy   56c7bc12ee6d   9 days ago    456MB
 ```
 
-* [ ] Is it a good idea to use tags like this to create different stages (dev, int, prod) ?
+* [x] Is it a good idea to use tags like this to create different stages (dev, int, prod) ?
 
 > The Docker tag helps maintain the build version to push the image to the Docker Hub**. The Docker Hub allows us to group images together based on name and tag.** Multiple Docker tags can point to a particular image. Basically, as in Git, Docker tags are similar to a specific commit. Docker tags are just an alias for an image ID.
 >
@@ -195,7 +195,7 @@ eclipse-temurin   17-jdk-jammy   56c7bc12ee6d   9 days ago    456MB
 Yes to handle ours stage. We can work with our test images and push to production when it's ready.
 ```
 
-* [ ] Using the appropriate command, update your local images and tags like this:
+* [x] Using the appropriate command, update your local images and tags like this:
 
 ```
 [INPUT]
@@ -209,9 +209,11 @@ eclipse-temurin     17-jdk-jammy     56c7bc12ee6d   10 days ago    456MB
 
 ```
 [INPUT]
-//TODO
+docker tag java-spring:labs java-spring:version1.0.dev
 
 [OUTPUT]
-//TODO
+REPOSITORY    TAG              IMAGE ID       CREATED      SIZE                                                                                                                                                          ✔  10:45:07 
+java-spring   labs             25f129967a02   7 days ago   602MB
+java-spring   version1.0.dev   25f129967a02   7 days ago   602MB
 ```
 

@@ -4,8 +4,12 @@
 
 <!---->
 
-* [ ] Run your "petclinic" docker based on the image created in the previous step.
-  * [ ] We should access to your application using the http standard port.
+* [x] Run your "petclinic" docker based on the image created in the previous step.
+  * [x] We should access to your application using the http standard port.
+
+```
+docker run --publish 8080:8080 java-spring:version1.0.dev
+```
 
 Result expected:
 
@@ -25,28 +29,30 @@ curl --request GET ^
 //disregard the message curl: (6) Could not resolve host: application
 ```
 
-* [ ] List all Dockers currently running on your local environment. Observe the port forwarding for your "petclinic" docker.
+* [x] List all Dockers currently running on your local environment. Observe the port forwarding for your "petclinic" docker.
 
 ```
 [INPUT]
-//TODO
+docker ps
 
 [OUTPUT]
-//TODO
+CONTAINER ID  IMAGE                        COMMAND                  CREATED         STATUS         PORTS                  NAMES 
+6515fbfeda95  java-spring:version1.0.dev   "./mvnw spring-boot:…"   6 minutes ago   Up 6 minutes   0.0.0.0:8080->8080/ tcpmodest_buck
+
 
 ```
 
-* [ ] Stop your "petclinic" docker
+* [x] Stop your "petclinic" docker
 
 ```
 [INPUT]
-//TODO
+docker stop 6515fbfeda95 
 
 [OUTPUT]
-//TODO
+---
 ```
 
-* [ ] Rename your docker as "petclinic-app"
+* [x] Rename your docker as "petclinic-app"
 
 <!---->
 
@@ -54,23 +60,23 @@ curl --request GET ^
 
 ```
 [INPUT]
-//TODO
+ docker rename modest_buck  petclinic-app
 
 [OUTPUT]
-//TODO
+6515fbfeda95   java-spring:version1.0.dev   "./mvnw spring-boot:…"   18 minutes ago   Exited (143) 5 minutes ago      petclinic-app
 ```
 
-* [ ] Restart your docker using the new name
+* [x] Restart your docker using the new name
 
 ```
 [INPUT]
-//TODO
+docker start petclinic-app
 
 [OUTPUT]
-//TODO
+---
 ```
 
-* [ ] Display all running dockers with this output format
+* [x] Display all running dockers with this output format
 
 <!---->
 
@@ -85,9 +91,9 @@ eclipse-petclinic:version1.0.dev   0.0.0.0:80->8080/tcp.   petclinic-server
 
 ```
 [INPUT]
-//TODO
+docker ps --format "table {{.Image}}\t{{.Ports}}\t{{.Names}}"
 
 [OUTPUT]
-//TODO
+java-spring:version1.0.dev   0.0.0.0:8080->8080/tcp   petclinic-app
 ```
 
