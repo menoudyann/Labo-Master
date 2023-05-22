@@ -192,7 +192,7 @@ eclipse-temurin   17-jdk-jammy   56c7bc12ee6d   9 days ago    456MB
 
 ```
 //TODO
-Explain
+Yes to handle ours stage. We can work with our test images and push to production when it's ready.
 ```
 
 * [ ] Using the appropriate command, update your local images and tags like this:
