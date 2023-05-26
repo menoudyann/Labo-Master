@@ -46,10 +46,10 @@ CONTAINER ID  IMAGE                        COMMAND                  CREATED     
 
 ```
 [INPUT]
-docker stop 6515fbfeda95 
+docker stop petclinic-app 
 
 [OUTPUT]
----
+petclinic-app
 ```
 
 * [x] Rename your docker as "petclinic-app"
