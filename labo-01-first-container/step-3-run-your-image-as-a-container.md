@@ -73,7 +73,7 @@ docker stop 6515fbfeda95
 docker start petclinic-app
 
 [OUTPUT]
----
+petclinic-app
 ```
 
 * [x] Display all running dockers with this output format
