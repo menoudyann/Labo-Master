@@ -44,10 +44,12 @@ which java
 
 ```
 [INPUT]
-//TODO
+java --version
 
 [OUTPUT]
-//TODO
+openjdk 20.0.1 2023-04-18
+OpenJDK Runtime Environment (build 20.0.1+9-29)
+OpenJDK 64-Bit Server VM (build 20.0.1+9-29, mixed mode, sharing)
 ```
 
 * [ ] Which current runtime is installed (JRE)?
@@ -57,12 +59,15 @@ which java
 java --version
 
 [OUTPUT]
+openjdk 20.0.1 2023-04-18
 OpenJDK Runtime Environment (build 20.0.1+9-29)
+OpenJDK 64-Bit Server VM (build 20.0.1+9-29, mixed mode, sharing)
 ```
 
-* [ ] Do we need to install the java virtual machine (JVM) ?
+* [x] Do we need to install the java virtual machine (JVM) ?
 
 ```
+Not already inlcuded in JRE.
 ```
 
 ### Install the Open JDK

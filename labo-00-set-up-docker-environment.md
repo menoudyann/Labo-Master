@@ -58,7 +58,7 @@ If you have installed Docker Desktop, you don’t need to enable BuildKit. If yo
 
 ### Result expected
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>This screen shot can differ from your own installation.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>This screen shot can differ from your own installation.</p></figcaption></figure>y
 
 ## Git Setup
 
