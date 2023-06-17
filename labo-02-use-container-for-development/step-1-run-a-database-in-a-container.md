@@ -16,7 +16,7 @@ Let's create both volumes, one for the data, and another one for the db config.
 
 ```
 [INPUT]
-//TODO
+docker volume create mysql_data
 
 [OUTPUT]
 mysql_data
@@ -26,7 +26,7 @@ mysql_data
 
 ```
 [INPUT]
-//TODO
+docker volume create mysql_config
 
 [OUTPUT]
 mysql_config
@@ -36,7 +36,7 @@ mysql_config
 
 ```
 [INPUT]
-//TODO
+docker volume ls
 
 [OUTPUT]
 DRIVER    VOLUME NAME
@@ -52,10 +52,10 @@ Let's create a user-defined bridge network enabling our application and our data
 
 ```
 [INPUT]
-//TODO
+docker network create vir1-network
 
 [OUTPUT]
-//TODO
+ccc53e18064dcb55678c67ec2d582b77ce08536c5e6230fdc1e80950ce2be35e
 ```
 
 * [] List the networks
@@ -116,7 +116,7 @@ a11a06843fd5: Waiting
 
 ```
 [INPUT]
-//TODO
+docker ps -a
 
 [OUTPUT]
 //Result expected
